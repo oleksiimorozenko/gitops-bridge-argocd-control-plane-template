@@ -62,7 +62,7 @@ spec:
                   enabled: true
               server:
                 secure: false
-                authMode: "client"
+                authMode: "server" # default is "client" needs auth token, "server" is open, and "sso" is to configure sso
                 extraEnv:
                   - name: FIRST_TIME_USER_MODAL
                     value: "false"
