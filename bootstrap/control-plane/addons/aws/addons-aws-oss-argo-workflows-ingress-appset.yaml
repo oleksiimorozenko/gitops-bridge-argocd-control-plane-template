@@ -63,7 +63,7 @@ spec:
               server:
                 secure: false
                 authMode: "client"
-                extraEnv: []
+                extraEnv:
                   - name: FIRST_TIME_USER_MODAL
                     value: false
                   - name: FEEDBACK_MODAL
