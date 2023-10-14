@@ -65,11 +65,11 @@ spec:
                 authMode: "client"
                 extraEnv:
                   - name: FIRST_TIME_USER_MODAL
-                    value: false
+                    value: "false"
                   - name: FEEDBACK_MODAL
-                    value: false
+                    value: "false"
                   - name: NEW_VERSION_MODAL
-                    value: false
+                    value: "false"
                 serviceType: ClusterIP
                 servicePort: 2746
                 servicePortName: http
