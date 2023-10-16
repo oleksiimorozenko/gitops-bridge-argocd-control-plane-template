@@ -62,7 +62,7 @@ spec:
                   enabled: true
               server:
                 secure: false
-                authMode: "server" # default is "client" needs auth token, "server" is open, and "sso" is to configure sso
+                authMode: "server" # default is "client" needs auth token, "server" is open/no-authentication, and "sso" is to configure sso
                 extraEnv:
                   - name: FIRST_TIME_USER_MODAL
                     value: "false"
@@ -89,7 +89,7 @@ spec:
                   tls:
                   - hosts: {{.metadata.annotations.argo_workflows_hosts}}
       destination:
-        namespace: '{{default "argocd" .metadata.annotations.argocd_namespace}}'
+        namespace: '{{default "argo-workflows" .metadata.annotations.argo_workflows_namespace}}'
         name: '{{.name}}'
       syncPolicy:
         automated: {}
